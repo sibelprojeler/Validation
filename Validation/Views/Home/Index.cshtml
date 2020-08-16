@@ -1,0 +1,26 @@
+﻿@using System.ComponentModel.DataAnnotations;
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+            <p>Ad: @Html.TextBoxFor(a => a.Ad)</p>
+            <p>Başlangıç tarih: @Html.EditorFor(a => a.BaslangicTarih)</p>
+            <p>Başlangıç saat: @Html.EditorFor(a => a.BaslangicSaat)</p>
+            <p>Kişi sayısı: @Html.TextBoxFor(a => a.KatilacakKisi)</p>
+            <p>EMail: @Html.TextBoxFor(a => a.Email)</p>
+            <input type="submit" value="Etkinlik Ekle" />
+        }
+    </div>
+</div>
